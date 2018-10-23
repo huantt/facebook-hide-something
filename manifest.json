@@ -1,0 +1,33 @@
+{
+    "name": "Remove Her",
+    "description": "Remove who you don't want to see in facebook messenger",
+    "version": "1.0",
+    "permissions": [
+        "cookies",
+        "tabs", 
+        "http://*/*", 
+        "https://*/*",
+        "storage"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["https://*.facebook.com/*"],
+        "run_at": "document_idle",
+        "js": ["javascript/inject.js"]
+    }],
+    "browser_action":
+    {
+        "default_title": "Set this page's color.",
+        "default_icon": "images/icon.png",
+        "default_popup": "html/popup.html"
+    },
+    "icons":
+    {
+        "128": "images/icon.png",
+        "16": "images/icon.png",
+        "19": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png"
+    },
+    "manifest_version": 2
+}

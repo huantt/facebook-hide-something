@@ -1,0 +1,44 @@
+<style>
+#close_button {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #333;
+    color: #FFF;
+    cursor: pointer;
+    z-index: 99;
+    line-height: 20px;
+}
+
+#sticky_banner {
+    width: 99%;
+    text-align: center;
+    position: fixed;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    z-index: 1000;
+    margin: auto;
+}
+</style>
+<div id="sticky_banner">
+    <div class="layout__wrapper" style="">
+        <span id="close_button" onclick="closeBanner()">×</span>
+        <a href="https://www.lazada.vn/khuyen-mai/" style="width: 50%;display: block; float: left"> 
+        	<img src="https://vn-live.slatic.net/cms/docking-banner/half-docking-Khuyen-mai.jpg" style="width: 100%; display: block; ">
+        	 </a>
+        <a href="https://www.lazada.vn/lazada-gian-hang-chinh-hang/" style="width: 50%;display: block; float: left"> <img src="https://vn-live.slatic.net/cms/2017/08-Aug/official stores/Halfdocking_ofs.jpg" style="width: 100%; display: block; "> 
+        </a>
+    </div>
+</div>
+
+<script>
+function closeBanner() {
+    document.getElementById("sticky_banner").style.display = "none";
+}
+</script>
